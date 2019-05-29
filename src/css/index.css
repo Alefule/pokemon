@@ -22,8 +22,7 @@
 }
 
 .cazadores{
-    background: red;
-    margin:90px;
+    margin:120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,15 +30,13 @@
 }
 
 .pokemons{
-    background:blue;
-    margin:90px;
+    margin:120px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cazador{
-    background: green;
     width: 100px;
     height: 150px;
     margin:5px;
@@ -47,7 +44,6 @@
 }
 
 .pokemon{
-    background:yellowgreen;
     width: 100px;
     height: 150px;
     margin:5px;
