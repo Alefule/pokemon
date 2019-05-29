@@ -1,0 +1,54 @@
+.container{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height: 1300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.campoLucha{
+    background-image: url("../assets/fondo/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1000px;
+    height: 700px;
+    box-shadow: 10px 10px 10px;  
+    border: 25px solid #b2e36c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cazadores{
+    background: red;
+    margin:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pokemons{
+    background:blue;
+    margin:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cazador{
+    background: green;
+    width: 100px;
+    height: 150px;
+    margin:5px;
+
+}
+
+.pokemon{
+    background:yellowgreen;
+    width: 100px;
+    height: 150px;
+    margin:5px;
+}
