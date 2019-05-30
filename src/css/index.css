@@ -5,9 +5,18 @@
     height: 1300px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.logotipo{
+    z-index: 1;
+    margin-bottom:-50px;
+}
+.logotipo img{
+    width: 400px;
 }
 
 .campoLucha{
+    z-index: 0;
     background-image: url("../assets/fondo/fondo.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -22,7 +31,7 @@
 }
 
 .cazadores{
-    margin:50px;
+    margin:20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,29 +39,49 @@
 }
 
 .pokemons{
-    margin:50px;
+    margin:20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cazador{
-    width: 75px;
-    height: 100px;
+    width: 90px;
+    height: 140px;
+    padding:10px;
     margin:5px;
-    border: 5px solid #89421b;
+    background-color: rgb(137,66,27, 0.5);
+    
   
 
 }
 
 .pokemon{
-    width: 75px;
-    height: 100px;
+    width: 90px;
+    height: 140px;
+    padding:10px;
     margin:5px;
-    border: 5px solid #b2e36c;
+    background-color: rgb(178,227,108, 0.5);
+}
+
+span {
+    font-size: 12px;
 }
 
 button {
     background: rgb(255,255,255,0);
     border: none;
 }
+
+#botonAtacar{
+    background: rgb(255,255,255,0);
+    border: none;
+    display:none;
+}
+
+#botonAtacar img{
+    width: 35px;
+    height: 35px; 
+}
+
+
