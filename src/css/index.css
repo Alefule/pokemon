@@ -11,8 +11,8 @@
     background-image: url("../assets/fondo/fondo.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 1000px;
-    height: 700px;
+    width: 800px;
+    height: 500px;
     box-shadow: 10px 10px 10px;  
     border: 25px solid #b2e36c;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .cazadores{
-    margin:120px;
+    margin:50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,21 +30,29 @@
 }
 
 .pokemons{
-    margin:120px;
+    margin:50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cazador{
-    width: 100px;
-    height: 150px;
+    width: 75px;
+    height: 100px;
     margin:5px;
+    border: 5px solid #89421b;
+  
 
 }
 
 .pokemon{
-    width: 100px;
-    height: 150px;
+    width: 75px;
+    height: 100px;
     margin:5px;
+    border: 5px solid #b2e36c;
+}
+
+button {
+    background: rgb(255,255,255,0);
+    border: none;
 }

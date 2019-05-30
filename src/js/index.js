@@ -1,6 +1,3 @@
-alert("Hola");
-
-
 function numAleatorio (min,max){
     return Math.floor(Math.random() * ((max+1) - min)) + min; 
 }
@@ -22,7 +19,7 @@ const Cazador = class {
 const Arquero = class extends Cazador {
     constructor () {
         super();
-        this.img = "assets/pokemons/cazadores" + numAleatorio(1,5) + ".svg" ;
+        this.img = "assets/cazadores/cazador" + numAleatorio(1,5) + ".svg" ;
         this.flechas = numAleatorio(200,300);
     }
 
@@ -50,7 +47,7 @@ const Arquero = class extends Cazador {
 const Luchador = class extends Cazador {
     constructor () {
         super();
-        this.img = "assets/pokemons/cazadores" + numAleatorio(1,5) + ".svg" ;
+        this.img = "assets/cazadores/cazador" + numAleatorio(1,5) + ".svg" ;
         this.fuerza = numAleatorio(20,40);
     }
 
@@ -69,6 +66,21 @@ const Luchador = class extends Cazador {
         }
     }
 }
+const botonPintar = document.querySelector('#botonPintar');
 
-const alejandro = new Luchador();
-console.log(alejandro);
+function pintarCampoLucha(){
+
+    let personaje = new Arquero();
+    console.log(personaje);
+
+    let cazadores = document.querySelector(".cazadores")
+    alert("Empieza el juego");
+    const divLuchador = document.createElement('div');
+    divLuchador.className = "cazador";
+    divLuchador.innerHTML = '<img src="assets/cazadores/cazador1.svg"></img><span>Puntuación:' + personaje.puntuacion + "</span><span>Daño: "+ personaje.flechas +"</span>"
+    cazadores.appendChild(divLuchador);
+}
+
+
+botonPintar.addEventListener('click', pintarCampoLucha);
+
