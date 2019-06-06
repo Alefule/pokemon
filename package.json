@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html --open"
+    "test": "jest",
+    "dev": "parcel src/index.html --open",
+    "build": "parcel build src/index.html -d build --public-url /pokemon/",
+    "deploy": "git subtree push --prefix build origin gh-pages"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }
