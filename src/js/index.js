@@ -90,7 +90,7 @@ function pintarCampoLucha(){
             divLuchador.className = "cazador";
             divLuchador.innerHTML = `<span>${personaje.constructor.name + " " +i }</span>
                             <img src="${personaje.img}">
-                            <span>Puntuación: ${personaje.puntuacion}</span>
+                            <span class="puntuacion puntuacion${i}">Puntuación: ${personaje.puntuacion}</span>
                             <span>Flechas: ${personaje.flechas}</span>`
             cazadores.appendChild(divLuchador);
             arrayLuchadores.push(personaje);
@@ -102,7 +102,7 @@ function pintarCampoLucha(){
             divLuchador.className = "cazador";
             divLuchador.innerHTML = `<span>${personaje.constructor.name + " " +i}</span>
                                     <img src="${personaje.img}">
-                                    <span>Puntuación: ${personaje.puntuacion}</span>
+                                    <span class="puntuacion puntuacion${i}">Puntuación: ${personaje.puntuacion}</span>
                                     <span>Fuerza: ${personaje.fuerza}</span>`
             cazadores.appendChild(divLuchador);
             arrayLuchadores.push(personaje);
@@ -115,7 +115,9 @@ function pintarCampoLucha(){
         divPokemon.className = "pokemon";
         divPokemon.innerHTML = `<span>${pokemon.constructor.name + " " +i}</span>
                                 <img src="${pokemon.img}">
-                                <span>Vida: ${pokemon.life}</span>`
+                                <span class="vida vida${i}">Vida:${pokemon.life} </span>
+                                <progress class="progress${i}" max="${pokemon.life}" value="${pokemon.life}">
+                                <span>Vida:${pokemon.life} </span>`
         pokemons.appendChild(divPokemon);
         arrayPokemons.push(pokemon);
     }
@@ -128,9 +130,33 @@ function pintarCampoLucha(){
 
 function atacar(){
 
+    for (let i = 0; i < arrayLuchadores.length; i++) {
+       
+        let muere = arrayLuchadores[i].atacar(arrayPokemons[i]);
+
+        let puntuacionLuchador = document.querySelector(".puntuacion" + (i+1));
+        puntuacionLuchador.innerHTML = "Puntuacion: " + arrayLuchadores[i].puntuacion;
+
+        let vidaPokemon = document.querySelector(".vida" + (i + 1));
+        vidaPokemon.innerHTML = "Vida: " + arrayPokemons[i].life; 
+
+        let progressPokemon = document.querySelector(".progress" + (i + 1));
+        progressPokemon.value = arrayPokemons[i].life;
+        
+        if(muere){
+            botonAtacar.style.display = "none";
+            alert("Ha ganado el Luchador: " + arrayLuchadores[i].constructor.name + " " + (i+1));
+            break;
+        }
+
+
+
+
+        
+    }
+
     console.log(arrayLuchadores);
     console.log(arrayPokemons);
-    arrayLuchadores[0].atacar(arrayPokemons[0]);
 
 }
 
