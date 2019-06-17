@@ -148,16 +148,8 @@ function atacar(){
             alert("Ha ganado el Luchador: " + arrayLuchadores[i].constructor.name + " " + (i+1));
             break;
         }
-
-
-
-
-        
+ 
     }
-
-    console.log(arrayLuchadores);
-    console.log(arrayPokemons);
-
 }
 
 
